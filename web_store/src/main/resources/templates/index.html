@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CocoShop</title>
+    <link rel="stylesheet" href="style.css">
+
+
+<body>
+    <div class="top">
+        <div class="container" style="display: flex; flex-direction: column; height: 100%;">
+            <ul class="list">
+                <li><a th:href="@{'/index'}"><img src="img/logo.jpg" alt="Главная"></a></li>
+                <li><a th:href="@{'/card'}"><img src="img/cart.png" alt="Корзина"></a></li>
+            </ul>
+            <div class="" style="display: flex; flex-direction: row ">
+                <div class="container" style="display: flex; flex-direction: column; height: 100%;">
+                    <h1 class="heading_top">Интернет магазин CocoShop</h1>
+                    <p class="parag parag1">Добро пожаловать в интернет магазин сухофруктов и орехов. В нашем магазине
+                        вы
+                        найдете все самое свежее и вкусное! </p>
+                    <a th:href="@{'/products'}" class="top_button">В магазин</a>
+                </div>
+                <img class="background_right" src="img/palm.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer ">
+        <div class="container">
+            <h3 class="heading3__footer"> Есть вопросы?</h3>
+            <p class="parag__footer"> Все вопросы, по оформлению заказа, доставке и качеству товара пишите на нашу почту
+            </p>
+            <hr>
+            <ul class="list__footer">
+                <li style="margin: 15px;">Komar Olga</li>
+                <li><a href="https://www.google.com/"><img src="img/googleplus.png" style="margin: 5px;"
+                            alt="e-mail"></a>
+                    olichek@gmail.com</li>
+            </ul>
+            <p class="parag copy"> &copy; Все права защищены</p>
+        </div>
+    </div>
+</body>
+
+</html>

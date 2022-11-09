@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добро пожаловать в NUTS SHOP</title>
+    <script src="product.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+
+</head>
+</head>
+
+<body>
+    <div class="top">
+        <div class="container" style="display: flex; flex-direction: column; height: 100%;">
+            <ul class="list">
+                <li><a th:href="@{'/index'}"><img src="img/logo.jpg" alt="Главная"></a></li>
+                <li><a th:href="@{'/card'}"><img src="img/cart.png" alt="Корзина"></a></li>
+            </ul>
+            <div class="" style="display: flex; flex-direction: row">
+                <div class="" style="display: flex; flex-direction: column ">
+                    <h3 class="product_header">Продукты</h3>
+                    <table class="table table-hover" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td>ID</td>
+                            <td>Название продукта</td>
+                            <td>Цена за 100 грамм</td>
+                            <td></td>
+                        </tr>
+                        <tbody th:each="pr : ${products}">
+<!--                        th:each="s : ${students}"-->
+                            <tr>
+                                <td> <span th:text="${pr.id}"/> </td>
+                                <td> <span th:text="${pr.name}"/> </td>
+                                <td>  <span th:text="${pr.price}+'$'"/> </td>
+                                <td>
+                                    <button class="btn btn-danger" ng-click="deleteStudent(s.id)">В корзину</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <img class="background_right" src="img/palm.png">
+
+            </div>
+        </div>
+    </div>
+    <div class="footer ">
+        <div class="container">
+            <h3 class="heading3__footer"> Есть вопросы?</h3>
+            <p class="parag__footer"> Все вопросы, по оформлению заказа, доставке и качеству товара пишите на нашу почту
+            </p>
+            <hr>
+            <ul class="list__footer">
+                <li style="margin: 15px;">Komar Olga</li>
+                <li><a href="https://www.google.com/"><img src="img/googleplus.png" style="margin: 5px;"
+                            alt="e-mail"></a>
+                    olichek@gmail.com</li>
+            </ul>
+            <p class="parag copy"> &copy; Все права защищены</p>
+        </div>
+    </div>
+</body>
+
+</html>
