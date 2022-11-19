@@ -17,7 +17,7 @@ public class ProductController {
 
     @GetMapping("/index")
     public String showMainPage(){
-        return "index";
+        return "index ";
     }
 
     @GetMapping("/products")
