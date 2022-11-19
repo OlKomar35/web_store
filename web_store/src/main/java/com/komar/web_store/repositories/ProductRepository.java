@@ -11,7 +11,6 @@ import java.util.List;
 @Component
 public class ProductRepository {
     private List<Product> products;
-
     @PostConstruct
     public void init() {
         products = new ArrayList<>(List.of(
